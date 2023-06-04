@@ -1,0 +1,98 @@
+    1  ps faux
+    2  cd /tmp/gpt/
+    3  ls -la
+    4  apt-get install -y python3-pip
+    5  cd docker/
+    6  history
+    7  history > history.docker.txt
+    8  cd ..
+    9  cat README.md 
+   10  less -iX  README.md 
+   11  apt-get install -y less 
+   12  less -iX  README.md 
+   13  pip3 install -r requirements.txt 
+   14  history
+   15  cd docker/
+   16  history > history.docker.txt 
+   17  cd ..
+   18  less -iX  README.md 
+   19  cd
+   20  mkdir src/
+   21  apt-get install -y less rsync
+   22  dir src/
+   23  rsync -vaRn /tmp/./gpt/ src/
+   24  rsync -vaRn --exclude .git  /tmp/./gpt/ src/
+   25  rsync -vaRn --exclude=.git  /tmp/./gpt/ src/
+   26  rsync -vaRn --exclude=.git --exclude=.github  /tmp/./gpt/ src/
+   27  rsync -vaRn --exclude=.g* --exclude=.github  /tmp/./gpt/ src/
+   28  rsync -vaRn --exclude=.g* --exclude=.p*  /tmp/./gpt/ src/
+   29  rsync -vaR --exclude=.g* --exclude=.p*  /tmp/./gpt/ src/
+   30  dir src/
+   31  dir src/gpt/
+   32  cd /tmp/gpt/
+   33  dir
+   34  ls -la
+   35  less -iX  README.md 
+   36  cd
+   37  dir
+   38  ls -la
+   39  cp /tmp/gpt/example.env .env
+   40  vi .env
+   41  apt-get install -y less rsync vim
+   42  vi .env
+   43  less -iX  README.md 
+   44  less -iX  /tmp/gpt/README.md 
+   45  cat .env 
+   46  mkdir models
+   47  apt-get install -y less rsync vim curl
+   48  cat .env 
+   49  ls -la
+   50  cd models
+   51  less -iX  /tmp/gpt/README.md 
+   52  curl -s -O https://gpt4all.io/models/ggml-gpt4all-j-v1.3-groovy.bin
+   53  dir
+   54  ls -la
+   55  rm ggml-gpt4all-j-v1.3-groovy.bin 
+   56  y
+   57  curl -O https://gpt4all.io/models/ggml-gpt4all-j-v1.3-groovy.bin
+   58  cd ..
+   59  cat .env 
+   60  mkdir db
+   61  exit
+   62  clear
+   63  ls -la
+   64  cd
+   65  ls -la
+   66  less -iX  /tmp/gpt/README.md 
+   67  cat .env 
+   68  less -iX  /tmp/gpt/README.md 
+   69  ls -la
+   70  rmdir db/
+   71  less -iX  /tmp/gpt/README.md 
+   72  cat .env 
+   73  cat -n  .env 
+   74  cat /tmp/gpt/example.env 
+   75  dir /tmp/gpt/
+   76  ls -la /tmp/gpt/
+   77  ls -la /tmp/gpt/source_documents/
+   78  idr
+   79  dir
+   80  rsync -vaRn /tmp/gpt/./source_documents/ .
+   81  rsync -vaR /tmp/gpt/./source_documents/ .
+   82  ls -la
+   83  tree
+   84  apt-get install -y less rsync vim curl tree
+   85  tree 
+   86  tree  | cat
+   87  history
+   88  cat /tmp/gpt/docker/history.docker.txt 
+   89  history > /tmp/gpt/docker/history.docker.txt 
+   90  ls -la
+   91  tree
+   92  cp src/gpt/*.py .
+   93  ls -la
+   94  less -iX  /tmp/gpt/README.md 
+   95  python3 ingest.py 
+   96  less -iX  /tmp/gpt/README.md 
+   97  python3 privateGPT.py 
+   98  history > /tmp/gpt/docker/history.docker.txt 
