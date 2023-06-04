@@ -10,23 +10,28 @@ rsync -vaR .././[a-z]* --exclude=docker src/
 docker build --tag privategpt .
 ```
 
-### Create interactive container
+### Create a background container
 
 ```bash
-docker run --rm -it --name gpt privategpt sleep inf &
+docker run -d --name gpt privategpt sleep inf
 ```
 
-### Exec into interactive container
+### Run the ingest.py script in the  container
+```bash
+docker container exec -it gpt python3 ingest.py
+```
+
+### Exec into interactive container and run privateGPT
 
 ```bash
 docker container exec -it gpt /bin/bash
+python3 privateGPT.py
+exit   # when finished
 ```
 
 ### Remove interactive container
 
 ```bash
 docker container stop gpt
+docker container rm gpt
 ```
-
-
-
