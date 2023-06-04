@@ -16,11 +16,6 @@ docker build --tag privategpt .
 docker run -d --name gpt privategpt sleep inf
 ```
 
-### Run the ingest.py script in the  container
-```bash
-docker container exec -it gpt python3 ingest.py
-```
-
 ### Exec into interactive container and run privateGPT
 
 ```bash
