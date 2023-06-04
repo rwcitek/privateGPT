@@ -3,6 +3,7 @@ RUN apt-get update && \
     apt-get dist-upgrade -y
 RUN apt-get install -y \
       python3-pip \
+      curl \
       ;
 
 ADD     src /src
@@ -13,11 +14,8 @@ RUN     mv example.env .env
 WORKDIR /src/models
 RUN     curl -O https://gpt4all.io/models/ggml-gpt4all-j-v1.3-groovy.bin
 
-
-
 WORKDIR /src
 COPY Dockerfile /
-
 
 # include some tools for the interactive container
 RUN     apt-get install -y less rsync vim curl tree file
