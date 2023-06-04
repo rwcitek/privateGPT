@@ -5,13 +5,13 @@ RUN apt-get install -y \
       python3-pip \
       ;
 
-RUN     apt-get install -y less rsync vim curl
+RUN     apt-get install -y less rsync vim curl tree
 
-ADD     src src
-WORKDIR src
+ADD     src /src
+WORKDIR /src
 RUN     pip3 install -r requirements.txt
+RUN     mv example.env .env
 
-WORKDIR models
-RUN     curl -O https://gpt4all.io/models/ggml-gpt4all-j-v1.3-groovy.bin
-
+WORKDIR /src/models
+# RUN     curl -O https://gpt4all.io/models/ggml-gpt4all-j-v1.3-groovy.bin
 
