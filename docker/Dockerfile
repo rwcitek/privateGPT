@@ -15,8 +15,10 @@ WORKDIR /src/models
 RUN     curl -O https://gpt4all.io/models/ggml-gpt4all-j-v1.3-groovy.bin
 
 WORKDIR /src
-COPY Dockerfile /
+COPY    Dockerfile /
+
+RUN     python3 ingest.py
 
 # include some tools for the interactive container
-RUN     apt-get install -y less rsync vim curl tree file
+RUN     apt-get install -y less rsync vim tree file
 
