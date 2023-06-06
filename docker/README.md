@@ -7,13 +7,13 @@ rsync -vaR .././[a-z]* --exclude=docker src/
 ### Build a docker image
 
 ```bash
-docker build --tag privategpt .
+docker build --tag rwcitek/privategpt .
 ```
 
 ### Create a background container
 
 ```bash
-docker run -d --name gpt privategpt sleep inf
+docker run -d --name gpt rwcitek/privategpt sleep inf
 ```
 
 ### Exec into interactive container and run privateGPT
