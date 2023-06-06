@@ -2,7 +2,7 @@
   "name": "my-privateGPT",
   "image": "mcr.microsoft.com/devcontainers/universal:2",
   "features": {
-  }
+  },
   "hostRequirements": {
      "memory": "16gb",
   }
